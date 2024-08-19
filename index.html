@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div style="display:flex; flex-direction: row; align-items: center;padding-right: 2%;">
+                    <img  class="img1"   src="logo.png" alt="logo" width="55px" height="auto">
+                    <div class="fade-in-text" style="margin-left: 15px;margin-right: 10%;">
+                        <h5 style="color:rgb(237, 224, 30)">Corporate Solutions</h5>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center"></div>
+                    <div class="d-flex">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">Signup/Login</button>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#openCart"><img class="img2" src="cart.png" alt="logo" width="35px"; height="auto";></a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navcontent" aria-controls="navcontent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background-color: rgb(222, 230, 230); border-radius: 3px;"></span></button>    
+                </div>
+                <div class="collapse navbar-collapse" id="navcontent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Our Vision & Mission</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Team</a></li>
+                                    <li class="nav-item  dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle"  href="#" id="careersDropdown"  role="button" 
+                                    data-bs-toggle="dropdown">Careers</a>
+                                        <ul class="dropdown-menu submenu" aria-labelledby="careersDropdown">
+                                            <li><a class="dropdown-item" href="#">Job Openings</a></li>
+                                            <li><a class="dropdown-item" href="#">Internships</a></li>
+                                            <li><a class="dropdown-item" href="#">Employee Benefits</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Industries Served</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Health Care</a></li>
+                                <li><a class="dropdown-item" href="#">Finance</a></li>
+                                <li><a class="dropdown-item" href="#">Manufacturing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Consulting</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Stratergy and Planning</a></li>
+                                <li><a class="dropdown-item" href="#">IT Consulting</a></li>
+                                <li><a class="dropdown-item" href="#">Operational Efficiency</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Technology</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Cloud Services</a></li>
+                                    <li><a class="dropdown-item" href="#">AI & Machine Learning</a></li>
+                                    <li><a class="dropdown-item" href="#">Data Analytics</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <!-- Button to trigger modal -->
+       
+
+    
+        <!-- Modal Structure -->
+        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab"
+                                style="color:black">Sign Up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="login-tab" data-bs-toggle="tab" href="#login" role="tab"
+                                style="color:black">Login</a>
+                            </li>
+                        </ul>
+                        <div style="margin-left: 57%;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tab-content">
+                            <!-- Sign Up Content -->
+                            <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                                <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Sign Up for Free</h2>
+                                <form>
+                                    <div class="form-group" style="display: flex;">
+                                        <input type="text" class="form-control" placeholder="First Name*" required>&nbsp;&nbsp;&nbsp;
+                                        <input type="text" class="form-control" placeholder="Last Name*" required>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email Address*" required><br>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Set A Password*" required><br>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block" style="margin-left: 35%;">CREATE ACCOUNT</button>
+                                </form>
+                            </div>
+    
+                            <!-- Login Content -->
+                            <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email Address*" required>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Enter Password" required>
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-primary btn-block" style="margin-left: 40%;">LOGIN</button>
+                                    <div class="text-center mt-2">
+                                        <a href="#">Forgot password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row text-center">
+        <h1 style="text-shadow: 2px 5px 1px rgba(0, 0, 0, 0.3);">Stratergy and growth solutions for your business</h3>
+            <h5>Welcome to our business and corporate consultation services </h5>
+        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <div class="container mt-1">
+        <!-- First Row: Solutions -->
+        <div class="row row-custom">
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-custom bg-light">
+                    <figure>
+                        <img src="busauto.jpg" alt="Business Process Automation">
+                        <figcaption>Business Process Automation</figcaption>
+                    </figure>
+                    <p>Streamline your operations with our automation solutions.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBusAuto">View Plans</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-custom bg-light">
+                    <figure>
+                        <img src="digitrans.jpg" alt="Digital Transformation">
+                        <figcaption>Digital Transformation</figcaption>
+                    </figure>
+                    <p>Transform your business with cutting-edge digital strategies.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaldigitrans">View Plans</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-custom bg-light">
+                    <figure>
+                        <img src="csd.jpg" alt="Custom Software Development">
+                        <figcaption>Custom Software Development</figcaption>
+                    </figure>
+                    <p>Build software tailored to your unique business needs.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCust">View Plans</a>
+                </div>
+            </div>
+        </div>
+
+       
+    <!-- Modal for Business Process Automation -->
+<div class="modal fade" id="modalBusAuto" tabindex="-1" aria-labelledby="modalBusAutoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBusAutoLabel" style="color: black;">Business Process Automation Plans</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <p class="modalBusAutoc">Business Process Automation</p>
+        <div class="modal-body">
+          <p>Select a plan that fits your business needs:</p>
+          <ul>
+            <li><strong>Basic Plan:</strong> $100/month - Includes essential automation features for small teams.</li>
+            <li><strong>Standard Plan:</strong> $250/month - Adds advanced features and integrations for medium-sized businesses.</li>
+            <li><strong>Premium Plan:</strong> $500/month - Comprehensive solution with full support and customization options.</li>
+          </ul>
+          <p>Choose a Plan:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan"  value="Basic Plan" id="flexRadioDefault1">
+            <label class="form-check-label" for="plan">
+                Basic Plan
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan"  value="Standard Plan" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="plan">
+                Standard Plan
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan" value="Premium Plan"  id="flexRadioDefault3">
+            <label class="form-check-label" for="plan">
+                Premium Plan
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="quantityBusAuto" class="form-label">Quantity:</label>
+            <input type="number" class="form-control" id="quantityBusAuto" min="1" value="1">
+          </div>
+          <button type="button" class="btn btn-primary" id="Vieworderdetails1">View order details</button>
+          <br>
+          <br>
+          <p id="plan1" style="background-color: rgb(35, 207, 181);"></p><br>
+          <p style="background-color: rgb(35, 207, 181);">Total price : <span id="price1"></span></p>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" id="addToCartButton1">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Digital Transformation -->
+  <div class="modal fade" id="modaldigitrans" tabindex="-1" aria-labelledby="modalDigiTransLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDigiTransLabel"style="color: black;">Digital Transformation Plans</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <p class="modaldigitransc">Digital Transformation</p>
+        <div class="modal-body">
+          <p>Select a plan that fits your business needs:</p>
+          <ul>
+            <li><strong>Basic Plan:</strong> $200/month - Core digital tools and strategies for small businesses.</li>
+            <li><strong>Standard Plan:</strong> $400/month - Enhanced tools with integration support for growing businesses.</li>
+            <li><strong>Premium Plan:</strong> $800/month - Full-suite digital transformation with ongoing consultancy and support.</li>
+          </ul>
+          <p>Choose a Plan:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan"  value="Basic Plan" id="flexRadioDefault1">
+            <label class="form-check-label" for="plan">
+                Basic Plan
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan"  value="Standard Plan" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="plan">
+                Standard Plan
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan" value="Premium Plan"  id="flexRadioDefault3">
+            <label class="form-check-label" for="plan">
+                Premium Plan
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="quantityDigiTrans" class="form-label">Quantity:</label>
+            <input type="number" class="form-control" id="quantityDigiTrans" min="1" value="1">
+          </div>
+          <button type="button" class="btn btn-primary" id="Vieworderdetails2">View order details</button>
+          <br>
+          <br>
+          <p id="plan2" style="background-color: rgb(35, 207, 181);"></p><br>
+          <p style="background-color: rgb(35, 207, 181);">Total price : <span id="price2"></span></p>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" id="addToCartButton2">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Custom Software Development -->
+  <div class="modal fade" id="modalCust" tabindex="-1" aria-labelledby="modalCSDLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCSDLabel"style="color: black;">Custom Software Development Plans</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <p class="modalCustc">Custom Software Development</p>
+        <div class="modal-body">
+          <p>Select a plan that fits your business needs:</p>
+          <ul>
+            <li><strong>Basic Plan:</strong> $300/month - Includes basic custom software solutions for startups.</li>
+            <li><strong>Standard Plan:</strong> $600/month - Enhanced features and support for growing companies.</li>
+            <li><strong>Premium Plan:</strong> $1200/month - Complete custom development with full consultancy and ongoing support.</li>
+          </ul>
+          <p>Choose a Plan:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan"  value="Basic Plan" id="flexRadioDefault1">
+            <label class="form-check-label" for="plan">
+                Basic Plan
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan"  value="Standard Plan" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="plan">
+                Standard Plan
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plan" value="Premium Plan"  id="flexRadioDefault3">
+            <label class="form-check-label" for="plan">
+                Premium Plan
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="quantityCSD" class="form-label">Quantity:</label>
+            <input type="number" class="form-control" id="quantityCSD" min="1" value="1">
+          </div>
+          <button type="button" class="btn btn-primary" id="Vieworderdetails3">View order details</button>
+          <br>
+          <br>
+          <p id="plan3" style="background-color: rgb(35, 207, 181);"></p><br>
+          <p style="background-color: rgb(35, 207, 181);">Total price : <span id="price3"></span></p>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" id="addToCartButton3">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Button to open cart modal (for testing) -->
+
+<div class="modal fade" id="openCart" tabindex="-1" aria-labelledby="modalopenCartLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="openCartLabel"style="color: black;">My Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+                    <ul>
+                        <li id="cartItems"></li>
+                    </ul>
+                    <button id="checkoutButton">Checkout</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row mb-4">
+            <!-- First Insight Block -->
+            <div class="col-md-3">
+                <h5 class="mb-3">Industry Trends</h5>
+                <p>Stay ahead with the latest updates in your industry. Explore emerging technologies, 
+                    strategies, and market insights.</p>
+                <a href="#" style="color: blue;">Read More >></a>
+            </div>
+            <div class="col-md-1"></div>
+
+            <!-- Second Insight Block -->
+            <div class="col-md-3">
+                <h5 class="mb-3">Our Success Stories</h5>
+                <p>Discover how we’ve helped clients transform their businesses with innovative solutions 
+                tailored to their needs.</p>
+                <a href="#" style="color: rgb(11, 11, 243);">Read More >></a>
+            </div>
+            <div class="col-md-1"></div>
+
+            <!-- Third Insight Block -->
+            <div class="col-md-3">
+                <h5 class="mb-3">Expert Advice</h5>
+                <p>Get valuable advice from our seasoned professionals on navigating business challenges 
+                   and leveraging opportunities.</p>
+                <a href="#" style="color: rgb(22, 22, 255);">Read More >></a>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <!-- Social Media Links and Copyright Section -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <h5>Follow Us</h5>
+                <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
+                    <img src="facebook.png" alt="Facebook" width="30px" height="auto">
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="text-white mx-2">
+                    <img src="twitter.png" alt="Twitter" width="30px" height="auto">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
+                    <img src="linkedin.png" alt="LinkedIn" width="30px" height="auto">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                    <img src="instagram.png" alt="Instagram" width="30px" height="auto">
+                </a>
+            </div>
+
+            <div class="col-md-6 mb-3 text-md-right">
+                <p>&copy; 2024 Corporate Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
